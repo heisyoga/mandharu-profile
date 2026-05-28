@@ -18,8 +18,8 @@
   "items": [
     {"id": 1, "name": "Es Kopi Mandha Ru 1.0", "price": "25K", "categoryId": "coffee-milk", "label": "Signature"},
     {"id": 2, "name": "Es Kopi Mandha Ru 2.0", "price": "25K", "categoryId": "coffee-milk", "label": "Signature"},
-    {"id": 3, "name": "Kopi Rage", "price": "18K", "categoryId": "coffee-milk"},
-    {"id": 4, "name": "Es Kopi Rage", "price": "20K", "categoryId": "coffee-milk"},
+    {"id": 3, "name": "Kopi Rage", "price": "18K", "categoryId": "coffee-milk", "label": "Signature"},
+    {"id": 4, "name": "Es Kopi Rage", "price": "20K", "categoryId": "coffee-milk", "label": "Signature"},
     {"id": 5, "name": "Cafe Latte Vanilla", "price": "28K", "categoryId": "coffee-flavor", "options": "Hot / Ice"},
     {"id": 6, "name": "Cafe Latte Caramel", "price": "28K", "categoryId": "coffee-flavor", "options": "Hot / Ice"},
     {"id": 7, "name": "Cafe Latte Hazelnut", "price": "28K", "categoryId": "coffee-flavor", "options": "Hot / Ice"},
