@@ -121,7 +121,7 @@ const Gallery = ({ gallery }) => {
                       whileTap={{ opacity: 0 }} // Hide text while zooming
                       className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-8 md:p-12 text-white pointer-events-none"
                     >
-                      <span className="text-secondary font-label-sm uppercase tracking-[0.3em] mb-2 font-bold">Mandha Ru Moments</span>
+                      <span className="text-secondary font-label-sm uppercase tracking-[0.3em] mb-2 font-bold">Mandha Ru</span>
                       <h3 className="font-display-lg text-headline-lg md:text-display-lg leading-tight">{item.title}</h3>
                     </motion.div>
                   )}
