@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import aboutImg from '../assets/images/about.jpg?w=1920&format=webp&quality=80'; // Import the optimized image
+
 
 const Story = ({ about }) => {
   const containerVariants = {
@@ -38,7 +40,7 @@ const Story = ({ about }) => {
                 whileHover={{ scale: 1.02 }}
                 className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover" 
                 alt="Mandha Ru Atmosphere" 
-                src="/images/about.jpg"
+                src={aboutImg} // Use the imported optimized image
               />
               <motion.div 
                 initial={{ scale: 0, rotate: -20 }}

@@ -1,15 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Import all images from the gallery folder and optimize them
+const galleryImages = import.meta.glob('../assets/images/*.jpg', {
+  eager: true,
+  query: {
+    w: 1920,
+    format: 'webp',
+    as: 'url'
+  }
+});
+
 const Gallery = ({ gallery }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Map the gallery data to use the optimized images
+  const optimizedGallery = (gallery || []).map(item => {
+    // Extract filename from the original URL (e.g., /images/front-1.jpg -> front-1.jpg)
+    const filename = item.url ? item.url.split('/').pop() : '';
+    // Match with the imported images (the keys in galleryImages are relative paths)
+    const optimizedUrlKey = Object.keys(galleryImages).find(key => key.endsWith(filename));
+    
+    // In vite-imagetools, sometimes the result is { default: 'url' } 
+    // depending on the version and configuration.
+    let finalUrl = item.url;
+    if (optimizedUrlKey) {
+      const imgData = galleryImages[optimizedUrlKey];
+      finalUrl = typeof imgData === 'string' ? imgData : (imgData.default || item.url);
+    }
+    
+    return {
+      ...item,
+      url: finalUrl
+    };
+  });
+
   const nextSlide = () => {
-    setActiveIndex((prev) => (prev + 1) % gallery.length);
+    if (optimizedGallery.length === 0) return;
+    setActiveIndex((prev) => (prev + 1) % optimizedGallery.length);
   };
 
   const prevSlide = () => {
-    setActiveIndex((prev) => (prev - 1 + gallery.length) % gallery.length);
+    if (optimizedGallery.length === 0) return;
+    setActiveIndex((prev) => (prev - 1 + optimizedGallery.length) % optimizedGallery.length);
   };
 
   // Keyboard navigation
@@ -20,7 +53,7 @@ const Gallery = ({ gallery }) => {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [optimizedGallery.length]);
 
   return (
     <section id="gallery" className="py-section-padding overflow-hidden bg-surface-container-lowest">
@@ -64,13 +97,13 @@ const Gallery = ({ gallery }) => {
 
         <div className="relative flex items-center justify-center w-full h-full overflow-visible">
           <AnimatePresence initial={false}>
-            {gallery.map((item, index) => {
+            {optimizedGallery.map((item, index) => {
               // Calculate relative position to active index
               let position = index - activeIndex;
               
               // Handle wrap-around for infinite look
-              if (position < -1) position = position + gallery.length;
-              if (position > gallery.length - 2) position = position - gallery.length;
+              if (position < -1) position = position + optimizedGallery.length;
+              if (position > optimizedGallery.length - 2) position = position - optimizedGallery.length;
 
               // Only render neighbor items
               const isVisible = position >= -2 && position <= 2;
@@ -133,7 +166,7 @@ const Gallery = ({ gallery }) => {
       </div>
 
       <div className="flex justify-center gap-3 mt-12">
-        {gallery.map((_, index) => (
+        {optimizedGallery.map((_, index) => (
           <button
             key={index}
             onClick={() => setActiveIndex(index)}

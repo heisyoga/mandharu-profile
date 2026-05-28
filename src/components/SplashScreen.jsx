@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import heroImgData from '../assets/images/hero.jpg?w=1920&format=webp&quality=98&as=url'; // Import optimized hero image
+const heroImg = typeof heroImgData === 'string' ? heroImgData : (heroImgData.default || heroImgData); // Handle potential object return
 
 const SplashScreen = ({ logo, onComplete }) => {
   const [isTimerDone, setIsTimerDone] = useState(false);
@@ -15,7 +17,7 @@ const SplashScreen = ({ logo, onComplete }) => {
     // We preload the hero image here to ensure it's in the browser cache 
     // before the splash screen fades out.
     const img = new Image();
-    img.src = '/images/hero.jpg';
+    img.src = heroImg;
     
     if (img.complete) {
       setIsHeroLoaded(true);

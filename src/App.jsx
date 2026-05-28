@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
 import ComingSoonModal from './components/ComingSoonModal';
 import { useSiteData } from './hooks/useSiteData';
+import logoData from './assets/logo.png?w=640&format=webp&as=url'; // Import the optimized logo
+const logo = typeof logoData === 'string' ? logoData : (logoData.default || logoData);
 import './App.css';
 
 function App() {
@@ -40,7 +42,7 @@ function App() {
       <AnimatePresence mode="wait">
         {showSplash ? (
           <SplashScreen 
-            logo={data.brand.logo} 
+            logo={logo} // Pass the imported logo
             onComplete={() => setShowSplash(false)} 
           />
         ) : (

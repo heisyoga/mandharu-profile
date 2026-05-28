@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import heroImgData from '../assets/images/hero.jpg?w=1920&format=webp&quality=98&as=url';
+const heroImg = typeof heroImgData === 'string' ? heroImgData : (heroImgData.default || heroImgData);
 
 const Hero = ({ brand }) => {
   const { scrollY } = useScroll();
@@ -38,7 +40,7 @@ const Hero = ({ brand }) => {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url('/images/hero.jpg')",
+            backgroundImage: `url(${heroImg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             maskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
