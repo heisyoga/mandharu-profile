@@ -136,12 +136,12 @@ const Footer = ({ brand, contact }) => {
         className="max-w-container-max-width mx-auto px-gutter py-10 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left"
       >
         <p className="font-label-sm text-label-sm text-on-surface-variant/60">
-          © 2024 <span className="text-primary font-bold">{brand.name}</span> Vietnamese Coffee. Dibuat dengan penuh rasa di Bali.
+          © 2024 <span className="text-primary font-bold">{brand.name}</span> Coffee. Dibuat dengan penuh rasa di Bali.
         </p>
-        <div className="flex gap-8 font-label-sm text-label-sm text-on-surface-variant/60">
+        {/* <div className="flex gap-8 font-label-sm text-label-sm text-on-surface-variant/60">
           <motion.a whileHover={{ color: "#7a0001" }} href="#">Syarat & Ketentuan</motion.a>
           <motion.a whileHover={{ color: "#7a0001" }} href="#">Kebijakan Privasi</motion.a>
-        </div>
+        </div> */}
       </motion.div>
     </footer>
   );

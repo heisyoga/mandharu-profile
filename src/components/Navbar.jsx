@@ -171,7 +171,7 @@ const Navbar = ({ brand, onOrderClick }) => {
 
               <div className="mt-auto pt-10 text-center">
                 <p className="text-on-surface-variant font-label-sm opacity-50 uppercase tracking-widest">
-                  Mandha Ru Vietnamese Coffee
+                  Mandha Ru Coffee
                 </p>
               </div>
             </motion.div>
