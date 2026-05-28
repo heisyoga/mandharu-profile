@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "on-surface-variant": "#5a413d",
+                        "tertiary-fixed": "#e7e4b9",
+                        "on-tertiary-fixed-variant": "#494828",
+                        "outline": "#8e706c",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#b22a1e",
+                        "tertiary": "#61603e",
+                        "primary-fixed-dim": "#ffb4a9",
+                        "tertiary-container": "#afad85",
+                        "secondary-fixed": "#ffdad6",
+                        "error-container": "#ffdad6",
+                        "secondary": "#bb0013",
+                        "background": "#f9f9f9",
+                        "inverse-primary": "#ffb4a9",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary-container": "#ffafa3",
+                        "surface-dim": "#dadada",
+                        "on-background": "#1b1b1b",
+                        "inverse-surface": "#303030",
+                        "on-tertiary-fixed": "#1d1d03",
+                        "on-primary-fixed": "#410000",
+                        "outline-variant": "#e2be b9",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#424122",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "primary-fixed": "#ffdad5",
+                        "tertiary-fixed-dim": "#cbc89f",
+                        "on-secondary-fixed": "#410002",
+                        "surface-container": "#eeeeee",
+                        "secondary-container": "#e9061c",
+                        "on-surface": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "primary-container": "#9e1b12",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#93000c",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#900e09",
+                        "primary": "#7a0001",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "base-unit": "8px",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Epilogue"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "display-lg": ["Epilogue"],
+                        "headline-lg": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.paper-texture {
+    background-color: #f9f9f9;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBXoEyLbFhtJposa0Ql1rvoww0ZuXQzkQ7NVl-sn47Z_t9gdW3mVBkLY4XRvcZPsbKYqzxSMfgsDZOPbSttpK5UOEg7Oby-dc9j7nSOz5ABbHr2nUPD2Sz4_lKNmXcjkbNooeIOYm6LQJegqSJQXIIkTOQDO4eldB0AnlHWqAeGUoJD4Q4zx0dMuMeWdeslVM7pX3WW5zqCQp5xw5-mS4rXGisTuV7pAKNLzVrs7lZn9vODcPhjDsNfEXaP0CIZT0WtzyZlnUq-XT0)
+    }
+.active-nav-link {
+    border-bottom: 2px solid #7a0001;
+    padding-bottom: 4px;
+    font-weight: 700;
+    color: #7a0001
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md paper-texture">
+<!-- TopNavBar -->
+<header class="bg-surface fixed top-0 w-full z-50 shadow-[0_20px_40px_rgba(122,0,1,0.05)]">
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max-width mx-auto py-6">
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight">Mandha Ru</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">Menu</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">Gallery</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">Events</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="#">Location</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-lg text-label-lg scale-95 transition-transform duration-200 hover:bg-secondary">
+                Order Coffee
+            </button>
+</nav>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-container-max-width mx-auto px-gutter mb-section-padding">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-4 py-1 rounded-full font-label-sm text-label-sm mb-6 inline-block">COMMUNITY &amp; HERITAGE</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Gather at our Home.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Experience the warmth of our heritage space through community workshops, cultural showcases, and intimate musical evenings. Mandha Ru is more than a café; it’s where stories are shared.
+                    </p>
+</div>
+<div class="flex-1 w-full h-[400px] rounded-xl overflow-hidden shadow-2xl rotate-2">
+<img class="w-full h-full object-cover" data-alt="A warm and inviting interior of a heritage coffee house. Soft sunlight filters through old wooden window frames, illuminating a long communal table made of reclaimed wood. People are seen in a soft blur, engaged in conversation, with steam rising from ceramic coffee cups. The atmosphere is nostalgic, peaceful, and rich with cultural history, featuring deep maroon accents and cream-colored walls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu2bGWqNFOKa6IPb9bbFLQg8g-6idq1UJ2uXSD1Ckw_Zvhi4wCgW93nXDMmC_7GfIGxN1irQ0HraHKmChy6S7S9H_spDnc6S08xyNr5pxEJgsrnbXYJ6NhILhjjaXb3ovWUkTrlUeR6p0zCd9Oc8mEF0tLulNcjzXedoNiwaiZWvLZkA-wHTzGrC3rZP6o_QpnVkMELaagLhS5lK3vjukXqFh0BBOvXOgffS8FvSDIMkFpO-imhjI294Fn6m1RAQAlUhU8UxrQ2eg"/>
+</div>
+</div>
+</section>
+<!-- Events Section -->
+<section class="bg-surface-container-low py-section-padding mb-section-padding">
+<div class="max-w-container-max-width mx-auto px-gutter">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Upcoming Events</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Reserve your spot for our community gatherings.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="p-2 border border-outline rounded-full hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 border border-outline rounded-full hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group shadow-[0_10px_20px_rgba(0,0,0,0.03)] border border-transparent hover:border-outline-variant transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of a traditional coffee brewing workshop. Hands are carefully pouring hot water from a copper kettle into a ceramic dripper. The lighting is moody and warm, highlighting the texture of the coffee grounds. The setting is a rustic kitchen with dark wood surfaces and earthy ceramics, creating a sense of artisanal craftsmanship and slow living." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6YAX9XpyAcKN7ZGuyZGtdHprkFaKHdy58k4BAENVrpepbR7Tyx2l_RtvHoKT7DeOKI9LbQ-Vm4o-38pkAdW4tGRHtwBa7WfKpOYmYOK_KM31-oScszwPhgkQtg-9NLADLMLAKQr8VY47w8fJors3nYh68y42xLbBlYVQb39eYbQ2iAxpZeeSapsC0yDGX1bU0nnwmTUC5zTFVn94rTKQHq6m4CLU6UwNDLeFHw2fclpAOLIQ07a37rtbFyi37RePcvDR54Ugt1i0"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Workshop</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm mb-3">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                Oct 24, 2024 • 10:00 AM
+                            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Traditional Brewing Roots</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Learn the ancestral methods of slow-roasting and manual brewing passed through generations.</p>
+<button class="w-full py-3 border border-primary text-primary rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">Join Workshop</button>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group shadow-[0_10px_20px_rgba(0,0,0,0.03)] border border-transparent hover:border-outline-variant transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An intimate evening acoustic concert in a cozy cafe setting. Warm string lights are draped across wooden beams. A musician is playing a guitar in the background, softly blurred, while the foreground shows a close-up of a small table with a cup of coffee and a vintage book. The mood is serene, soulful, and romantic, capturing a perfect slow evening." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoVp9FKciXk1LlVdJ5ZsynBbLQRrRmcvRUb2B5h6uzzU0ROWuan_YmaMMtAyZEdjr0EfrsHN03D5m_76UfqyeAN-hItGylpJ_uQRCKVAPsyz-r_FoEs17oUnJAbGqokaGbtmVdo0TTcqFr0vknIuO5qOJL-bFUIVX7ruvC4licVOT-bomIaFgln0MjYaFx1ETvJ_wlY5gZ_S92y-A24nEwXahI7ZC4Zlr_elkd2xmGvzXudia_nZYFr84JJ1xvSkxrDmC157FK8Hs"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Music</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm mb-3">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                Oct 28, 2024 • 7:00 PM
+                            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Acoustic Soul Sessions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Unwind with local indie artists in our courtyard for an evening of gentle melodies and warm brews.</p>
+<button class="w-full py-3 border border-primary text-primary rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">Book a Seat</button>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group shadow-[0_10px_20px_rgba(0,0,0,0.03)] border border-transparent hover:border-outline-variant transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A literary reading group gathered around a circular table in a library-like corner of a heritage café. Shelves of old books line the background. A group of diverse people are engaged in a deep discussion, with notebooks and coffee cups scattered on the table. The lighting is soft and focused, creating an atmosphere of intellectual curiosity and homey comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3iwxFTZqKnhipRiKSLjuQQkTvPQgi1-zsy-sCjgtaHE5d3RUg79o05iB-ggLK2nnWlN90dY9NpfDrBvIyaSHFxsXXgS-9vHdLwffCNurL7lqP2mo1Vvy9mJ3iHr71U8kxbOz6F8vtyH06ncerYWjQ89otVgyJ0Kn3eRgeJcUY-UTeSbNC0llOtfOeHWwFoMz16sV6uermBUTkv4B6EGu89Dqw11ewHzVmjlYslbb1MzOKN64C4Sii0h7pxNksKIP5ydJMar-CGt0"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Culture</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm mb-3">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                Nov 02, 2024 • 3:00 PM
+                            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Storyteller's Circle</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A monthly gathering for poets and writers to share their work in a safe, heritage-inspired environment.</p>
+<button class="w-full py-3 border border-primary text-primary rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors">Register Interest</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Contact Section -->
+<section class="max-w-container-max-width mx-auto px-gutter mb-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Contact Form -->
+<div class="bg-white p-8 md:p-12 rounded-2xl shadow-[0_30px_60px_rgba(122,0,1,0.08)]">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Send us a Note</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10">We'd love to hear from you. Drop by for a chat or leave us a message below.</p>
+<form class="space-y-6">
+<div class="relative">
+<label class="font-label-sm text-label-sm text-primary mb-2 block">Your Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-4 focus:ring-2 focus:ring-primary font-body-md text-body-md outline-none" placeholder="Tell us who you are" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-label-sm text-primary mb-2 block">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-4 focus:ring-2 focus:ring-primary font-body-md text-body-md outline-none" placeholder="Where can we reach you?" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-label-sm text-primary mb-2 block">Your Message</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg px-4 py-4 focus:ring-2 focus:ring-primary font-body-md text-body-md outline-none resize-none" placeholder="Share your thoughts or questions..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline-md text-headline-md hover:bg-secondary transition-all transform active:scale-95 shadow-lg" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+<!-- Location Info & Map -->
+<div>
+<div class="mb-10 space-y-6">
+<div class="flex gap-4">
+<div class="bg-primary-fixed p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Our Home</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Jalan Heritage No. 12, Old Town Quarter,<br/>Central Jakarta, 10110</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-primary-fixed p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Opening Hours</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Mon – Fri: 08:00 — 21:00<br/>Sat – Sun: 09:00 — 22:00</p>
+</div>
+</div>
+</div>
+<!-- Map Integration -->
+<div class="rounded-2xl overflow-hidden h-[350px] shadow-lg grayscale hover:grayscale-0 transition-all duration-700 border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A stylized, aesthetic map of a historic city quarter. The map features elegant typography for street names, minimalist icons for heritage buildings, and a soft cream and maroon color palette that matches the brand identity. The map is presented in a clean, modern way with subtle texture, appearing more like a hand-drawn illustration than a digital navigation tool." data-location="Jakarta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAydTiJwv_GR1ABa8okQV1xRag4f7kKkDVx6GwansXfHY7fzMl-J28GgNzGiJi80lURkWn5JasNfMU7vAuFYgUNXlxiOKSztXvW07AOPbttOcKUaQsRZc4mUELw7ABHwZXwSTYRBdMhMu-l-s1_w4MNckXCZYgkka8Gby7OhNtZDsRtIDcfkzY1RNHsgENZEVx6CdV1kSx4NwazLEKsxnpjAblkAV6B9XrxOfaB6ecvNLhbqBjjrDGJg1fVp3p72N1KMYNapU6pOrk"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start px-gutter py-section-padding max-w-container-max-width mx-auto gap-8">
+<div class="max-w-sm">
+<div class="font-headline-md text-headline-md text-primary mb-4">Mandha Ru</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A sanctuary for the soul, serving heritage coffee and community stories since 2012.</p>
+<div class="flex gap-4">
+<a class="text-primary hover:text-secondary" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-primary hover:text-secondary" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-primary hover:text-secondary" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-12">
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-4">Navigation</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Contact</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Location</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Privacy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-4">Visit Us</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed uppercase tracking-wider">
+                        Jalan Heritage No. 12<br/>
+                        Jakarta, Indonesia<br/>
+                        +62 21 555 0123
+                    </p>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant py-8 max-w-container-max-width mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Mandha Ru Heritage Coffee. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Designed with ♡ for Community</span>
+</div>
+</div>
+</footer>
+</body></html>

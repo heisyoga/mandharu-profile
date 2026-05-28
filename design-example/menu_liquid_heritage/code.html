@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#494828",
+                    "tertiary-container": "#ce3f30",
+                    "on-error": "#690005",
+                    "surface-tint": "#ffb4ab",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "background": "#131313",
+                    "inverse-primary": "#c00014",
+                    "surface-container": "#1f1f1f",
+                    "secondary-container": "#494828",
+                    "tertiary-fixed": "#ffdad5",
+                    "on-primary-container": "#fff7f6",
+                    "on-secondary-fixed": "#1d1d03",
+                    "secondary": "#cbc89f",
+                    "secondary-fixed-dim": "#cbc89f",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "surface": "#131313",
+                    "tertiary": "#ffb4a9",
+                    "primary-fixed": "#ffdad6",
+                    "outline": "#af8783",
+                    "secondary-fixed": "#e7e4b9",
+                    "on-secondary": "#323214",
+                    "error-container": "#93000a",
+                    "surface-variant": "#353535",
+                    "inverse-surface": "#e2e2e2",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#690006",
+                    "on-tertiary-fixed-variant": "#900e09",
+                    "inverse-on-surface": "#303030",
+                    "on-secondary-container": "#b9b78e",
+                    "surface-dim": "#131313",
+                    "surface-bright": "#393939",
+                    "error": "#ffb4ab",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary-fixed": "#410002",
+                    "on-tertiary-fixed": "#410000",
+                    "on-tertiary-container": "#fff7f6",
+                    "on-tertiary": "#690001",
+                    "primary-container": "#e6001a",
+                    "on-surface-variant": "#e9bcb7",
+                    "on-primary-fixed-variant": "#93000c",
+                    "on-background": "#e2e2e2",
+                    "surface-container-highest": "#353535",
+                    "primary": "#ffb4ab",
+                    "outline-variant": "#5e3f3b",
+                    "tertiary-fixed-dim": "#ffb4a9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "xl": "48px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "container-margin": "32px",
+                    "sm": "8px",
+                    "gutter": "20px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "label-caps": ["Space Grotesk"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(105, 0, 6, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(105, 0, 1, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(31, 31, 31, 1) 0px, transparent 80%);
+            min-height: 100vh;
+            color: #e2e2e2;
+        }
+        .liquid-glass {
+            background: rgba(226, 226, 226, 0.05);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(226, 226, 226, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .glass-glow {
+            box-shadow: 0 0 40px rgba(230, 0, 26, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/20 backdrop-blur-[40px] border-b border-on-surface-variant/20 flex justify-between items-center px-container-margin py-md shadow-2xl shadow-black/40">
+<div class="font-headline-md text-headline-md font-bold text-primary">Mandha Ru</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-all duration-300 hover:scale-105" href="#">Menu</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Heritage</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Gallery</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Events</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-full font-label-caps text-label-caps uppercase hover:scale-105 transition-transform active:scale-95">
+            Reserve a Table
+        </button>
+</nav>
+<main class="pt-[120px] pb-xl px-container-margin max-w-7xl mx-auto">
+<!-- Hero Header -->
+<header class="mb-xl text-center">
+<div class="inline-block px-md py-xs rounded-full liquid-glass border-primary/20 mb-md">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">The Artisanal Collection</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-sm">Our Heritage Menu</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                A curated symphony of timeless flavors, where ancient traditions meet the precision of the future.
+            </p>
+</header>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Featured Item: Private Reserve -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl liquid-glass p-lg flex flex-col md:flex-row gap-lg">
+<div class="w-full md:w-1/2 aspect-square rounded-lg overflow-hidden relative">
+<img alt="Mandha Ru Private Reserve" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhciB4BvZxP2VSr-EXGmksRGj-g1waOsAL2fyKrj1w68XLoOM4_yfEB6KV-Z-JTQOUt7oK-7gzGj8obGFG-5kEo90YvKcimAix682kx-O9UZ5l_gs8l8Xq4Lz2IMAr58FJ5R3GQWka-sfOdhRsxMXhMETs5ZdbD7-d405ECEuebmxuHoTIlmWjSZ1MVIU07h6E2tdbyQEvhsZxokHiFucxr2JklQ1FlCBf-6u7i5v1XKB60pi90Za23PdvhlK_lxRAaZSV_nsa3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center">
+<div class="flex items-center gap-xs text-primary mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps">Signature</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Mandha Ru Private Reserve</h2>
+<p class="text-on-surface-variant mb-lg font-body-md">
+                        Hand-selected beans from our high-altitude volcanic estates, slow-roasted over heritage stone to unlock deep notes of dark cacao and wild berries.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-headline-md text-headline-md">$12.00</span>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-caps hover:scale-105 transition-transform active:scale-95">Add to Order</button>
+</div>
+</div>
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 blur-[100px] pointer-events-none"></div>
+</div>
+<!-- Side Image Accent -->
+<div class="md:col-span-4 rounded-xl overflow-hidden liquid-glass">
+<img alt="Artisanal Heritage Context" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj9VciSL3junljrQHDOtrjF7LCIV5qx5H5BHbBBp4-NyFiTtZV7ZLamdVACUezhgrjZ2WACp3hSW9URZT_HdZU2LR02rAL5Rej72WFvHQjoRA4dVbgfNS1NO6PWIaGNpbKkU2H6S3TQXOQeO0d6B9nGMKbWQ0LvArIjXcm1o4l0Ys4Tx5A-dXnQ5bnhLxbcXj28nf6N1LX6FqABJiy2wbDKvwNGPdeqrWZ1f_iEuWFHChnygo6iO_fgTlzC3TFEkyo_yIgifv_85g"/>
+</div>
+<!-- Bento Grid - Items -->
+<div class="md:col-span-4 liquid-glass p-lg rounded-xl flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-start mb-md">
+<h3 class="font-headline-md text-[24px] text-on-surface">Artisanal Sourdough</h3>
+<span class="text-primary font-bold">$14.00</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">
+                        36-hour fermented heritage grain, served with whipped cultured butter and smoked sea salt.
+                    </p>
+</div>
+<div class="relative rounded-lg overflow-hidden aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close up of a freshly baked artisanal sourdough loaf with a crispy golden crust, placed on a dark stone surface in a moody, high-contrast lighting setup with deep red accents and a liquid glass aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5X0Sfm1KHOQFf1-n0xDKQ9ZHNJ_S84zitQSVh8-dJZPPaG2sM8EexMieNefqMZUrf8HI0-lOa7YcJii6yYd7EE-kVyRJ40HTAzktGXkQBVCJF4kixHUoJLFek7RfcqiaUwtoswsCVy2cC45jNuDHe-xv7YzrgpvItnno-E874PhpefyIaOL_rDjjobhV2JGLGQiNnEG9ExPpxPBlESuuzOha90vDOiEgV7RlL1GxPBxVNB2LUqOTnZ-TwHoJDlyo8tYtHjdHj-4"/>
+</div>
+</div>
+<div class="md:col-span-4 liquid-glass p-lg rounded-xl flex flex-col justify-between group glass-glow border-primary/30">
+<div>
+<div class="flex items-center gap-xs text-primary mb-xs">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span class="font-label-caps text-[10px] tracking-tighter">Pure Essence</span>
+</div>
+<div class="flex justify-between items-start mb-md">
+<h3 class="font-headline-md text-[24px] text-on-surface">Stone-Ground Matcha</h3>
+<span class="text-primary font-bold">$9.00</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">
+                        Ceremonial grade Uji matcha, whisked to a velvety foam. Pure, vibrant, and soul-awakening.
+                    </p>
+</div>
+<div class="relative rounded-lg overflow-hidden aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A bowl of vibrant green ceremonial matcha being whisked, with steam rising in a dark, atmospheric setting. The scene features liquid glass elements, deep maroon shadows, and sharp red light highlights for a futuristic heritage look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSS9YXDVOFpdWhr2VmynjotJ4fYz2VBv4N3sUolFD1I41KQtYRmHxst5UBkLJkZ8UIGji3Lh-mZKUWV_bF1i-tphG1ryFcngN_c2xUz2pVUrlWSgxX8je7j4RRtzAJEU-c68JABSoUiv_WR_eyrIZZKzID6XgMVD3TdjXHypPV5dLupRY9plhil-iQjutG_vP6NGo56kJaLXTTKDuE31Ce4MBgNAvCWZ0u5b2fzAvptZHx48GZ-gQIuB8z-rj4q1GXauQHYFqYL9I"/>
+</div>
+</div>
+<div class="md:col-span-4 liquid-glass p-lg rounded-xl flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-start mb-md">
+<h3 class="font-headline-md text-[24px] text-on-surface">Petite Pastry Box</h3>
+<span class="text-primary font-bold">$22.00</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">
+                        A selection of four seasonal pastries, crafted with French precision and Mandha Ru botanicals.
+                    </p>
+</div>
+<div class="relative rounded-lg overflow-hidden aspect-video">
+<img alt="Petite Pastry Selection" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida/ADBb0ugEV7TbnAdNC4c_yoAUUAUPwkUPe27gNXIpriLfDniRWCsAxCj5EaOIsfQwZsHY-ngCBvv-yjI1Sc5pnVV3jXuAFx--xrbu8A7-W06HBt5gdpvl-iE1fmhHGfienShhUMj5yArLKUskpQSH6hZqM4xho0XTwZACtCeZa584xLUUdns6pH2yOo_elZN7n47NhODT7nFWEQQ_ZKZMxzaGSRaUALYoMpGqa8ofpUKLDAkJhqJWMJHktgHYNpekr9QR2561IlnnWxZN"/>
+</div>
+</div>
+</div>
+<!-- Section Call to Action -->
+<section class="mt-xl py-xl rounded-xl liquid-glass relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5"></div>
+<div class="relative z-10 max-w-xl px-md">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Host Your Own Ritual</h2>
+<p class="text-on-surface-variant mb-xl">
+                    Our heritage space is available for private tastings and artisanal workshops. Immerse your guests in the Mandha Ru experience.
+                </p>
+<div class="flex flex-col sm:flex-row gap-md justify-center">
+<button class="bg-primary text-on-primary px-xl py-md rounded-full font-label-caps uppercase hover:shadow-[0_0_20px_rgba(230,0,26,0.5)] transition-all">Inquire Now</button>
+<button class="border border-outline-variant text-on-surface px-xl py-md rounded-full font-label-caps uppercase hover:bg-surface-variant transition-all">Download Full Menu</button>
+</div>
+</div>
+<!-- Background Liquid Glow -->
+<div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[600px] h-32 bg-primary/20 blur-[80px] rounded-full"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest/80 backdrop-blur-[20px] border-t border-outline-variant/20 py-xl px-container-margin w-full flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-md text-headline-md text-primary font-bold">Mandha Ru</div>
+<div class="text-secondary font-body-md text-body-md text-center md:text-left">
+            © 2024 Mandha Ru Coffee. Artisanal Future Heritage.
+        </div>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Sustainability</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Careers</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Locate Us</a>
+</div>
+</footer>
+</body></html>

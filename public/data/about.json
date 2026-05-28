@@ -1,0 +1,29 @@
+{
+  "title": "Cerita Kami: Membawa Pulang Kenangan",
+  "content": [
+    "Mandha Ru berasal dari 2 kata yaitu 'Mandha' dan 'Ru'. Mandha diambil dari bahasa Sansekerta yang berarti Rumah dan Benda, sedangkan Ru berarti Kedai. Didirikan pada Agustus 2024, Mandha Ru hadir untuk menciptakan ruang yang hangat seperti rumah sendiri.",
+    "Konsep kami terinspirasi dari budaya kopi Vietnam dan Asia Tenggara, dengan sentuhan desain bangunan lama yang memberikan nuansa nostalgia. Kami memanfaatkan barang-barang daur ulang untuk menciptakan dekorasi yang unik dan bermakna.",
+    "Mandha Ru bukan sekadar tempat ngopi, tapi juga ruang kolaborasi bagi komunitas dan seniman di Bali."
+  ],
+  "quote": "Mandha Ru adalah tempat yang nyaman untuk pulang, bercerita, dan merajut kenangan di setiap sudutnya.",
+  "values": [
+    {
+      "id": 1,
+      "title": "Konsep Autentik",
+      "description": "Membawa suasana kopi Vietnam yang asli ke Bali dengan bangunan bergaya heritage.",
+      "icon": "home"
+    },
+    {
+      "id": 2,
+      "title": "Ramah Lingkungan",
+      "description": "Memanfaatkan barang daur ulang untuk menciptakan ruang yang lebih berguna dan bersahaja.",
+      "icon": "eco"
+    },
+    {
+      "id": 3,
+      "title": "Ruang Kolaborasi",
+      "description": "Membuka peluang bagi seniman dan komunitas lokal untuk tumbuh bersama.",
+      "icon": "groups"
+    }
+  ]
+}

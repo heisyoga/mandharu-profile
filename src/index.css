@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+:root {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #f9f9f9;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Menyesuaikan tinggi navbar agar title tidak tertutup */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #1b1b1b;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, rgba(249, 249, 249, 1) 0%, rgba(249, 249, 249, 0.9) 30%, rgba(249, 249, 249, 0) 100%);
+}
+
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+
+.paper-texture {
+  background-color: #f9f9f9;
+  background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBXoEyLbFhtJposa0Ql1rvoww0ZuXQzkQ7NVl-sn47Z_t9gdW3mVBkLY4XRvcZPsbKYqzxSMfgsDZOPbSttpK5UOEg7Oby-dc9j7nSOz5ABbHr2nUPD2Sz4_lKNmXcjkbNooeIOYm6LQJegqSJQXIIkTOQDO4eldB0AnlHWqAeGUoJD4Q4zx0dMuMeWdeslVM7pX3WW5zqCQp5xw5-mS4rXGisTuV7pAKNLzVrs7lZn9vODcPhjDsNfEXaP0CIZT0WtzyZlnUq-XT0);
+}
+
+.heritage-badge {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.heritage-border {
+  border: 1px solid rgba(122, 0, 1, 0.1);
+}
+
+.paper-shadow {
+  box-shadow: 0 20px 40px rgba(122, 0, 1, 0.05);
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.heritage-border {
+  border: 1px solid rgba(122,0,1,0.15);
+  box-shadow: inset 0 0 40px rgba(122,0,1,0.02);
+}

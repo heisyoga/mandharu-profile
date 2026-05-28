@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mandha Ru - About &amp; Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Grotesk:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#494828",
+                        "tertiary-container": "#ce3f30",
+                        "on-error": "#690005",
+                        "surface-tint": "#ffb4ab",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "background": "#131313",
+                        "inverse-primary": "#c00014",
+                        "surface-container": "#1f1f1f",
+                        "secondary-container": "#494828",
+                        "tertiary-fixed": "#ffdad5",
+                        "on-primary-container": "#fff7f6",
+                        "on-secondary-fixed": "#1d1d03",
+                        "secondary": "#cbc89f",
+                        "secondary-fixed-dim": "#cbc89f",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface": "#131313",
+                        "tertiary": "#ffb4a9",
+                        "primary-fixed": "#ffdad6",
+                        "outline": "#af8783",
+                        "secondary-fixed": "#e7e4b9",
+                        "on-secondary": "#323214",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353535",
+                        "inverse-surface": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#690006",
+                        "on-tertiary-fixed-variant": "#900e09",
+                        "inverse-on-surface": "#303030",
+                        "on-secondary-container": "#b9b78e",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#393939",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#410002",
+                        "on-tertiary-fixed": "#410000",
+                        "on-tertiary-container": "#fff7f6",
+                        "on-tertiary": "#690001",
+                        "primary-container": "#e6001a",
+                        "on-surface-variant": "#e9bcb7",
+                        "on-primary-fixed-variant": "#93000c",
+                        "on-background": "#e2e2e2",
+                        "surface-container-highest": "#353535",
+                        "primary": "#ffb4ab",
+                        "outline-variant": "#5e3f3b",
+                        "tertiary-fixed-dim": "#ffb4a9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "xl": "48px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "container-margin": "32px",
+                        "sm": "8px",
+                        "gutter": "20px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-caps": ["Space Grotesk"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background: radial-gradient(circle at 0% 0%, #1a0000 0%, #131313 50%),
+                        radial-gradient(circle at 100% 100%, #2d0a0a 0%, #131313 50%);
+            background-attachment: fixed;
+        }
+        .liquid-glass {
+            backdrop-filter: blur(40px);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .glow-accent {
+            filter: blur(80px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/20 backdrop-blur-[40px] border-b border-on-surface-variant/20 shadow-2xl shadow-black/40 flex justify-between items-center px-container-margin py-md">
+<div class="font-headline-md text-headline-md font-bold text-primary">Mandha Ru</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Home</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Menu</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 hover:scale-105" href="#">Heritage</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Gallery</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Events</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-300 hover:scale-105" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-full font-label-caps text-label-caps hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg shadow-primary/20">
+            Reserve a Table
+        </button>
+</nav>
+<main class="pt-xl space-y-xl">
+<!-- Hero Section: Liquid Heritage -->
+<section class="relative min-h-[80vh] flex items-center px-container-margin overflow-hidden">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary glow-accent rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-tertiary glow-accent rounded-full"></div>
+<div class="grid lg:grid-cols-2 gap-xl items-center relative z-10 w-full">
+<div class="space-y-lg">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">ESTABLISHED 1924</span>
+<h1 class="font-display-lg text-display-lg text-on-surface">A House of Patience and Heritage</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        At Mandha Ru, time is our most precious ingredient. We embrace the "macOS Tahoe" philosophy of digital fluidity while preserving the artisanal traditions of slow-roasting. Every bean tells a story of centuries-old patience.
+                    </p>
+<div class="flex gap-md">
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-label-caps text-label-caps hover:brightness-110 transition-all">OUR STORY</button>
+<button class="liquid-glass px-xl py-md rounded-xl font-label-caps text-label-caps">VIEW MANIFESTO</button>
+</div>
+</div>
+<div class="relative group">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+<img alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhciB4BvZxP2VSr-EXGmksRGj-g1waOsAL2fyKrj1w68XLoOM4_yfEB6KV-Z-JTQOUt7oK-7gzGj8obGFG-5kEo90YvKcimAix682kx-O9UZ5l_gs8l8Xq4Lz2IMAr58FJ5R3GQWka-sfOdhRsxMXhMETs5ZdbD7-d405ECEuebmxuHoTIlmWjSZ1MVIU07h6E2tdbyQEvhsZxokHiFucxr2JklQ1FlCBf-6u7i5v1XKB60pi90Za23PdvhlK_lxRAaZSV_nsa3"/>
+</div>
+<div class="absolute -bottom-md -left-md liquid-glass p-lg rounded-2xl max-w-xs">
+<p class="font-body-md text-body-md italic">"In the depth of the roast, we find the echo of our ancestors."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Gallery Section -->
+<section class="px-container-margin py-xl">
+<div class="mb-lg space-y-xs">
+<h2 class="font-headline-md text-headline-md">Visual Heritage</h2>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Feature -->
+<div class="md:col-span-8 group relative rounded-[2.5rem] overflow-hidden h-[600px] border border-white/5">
+<img alt="" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugEV7TbnAdNC4c_yoAUUAUPwkUPe27gNXIpriLfDniRWCsAxCj5EaOIsfQwZsHY-ngCBvv-yjI1Sc5pnVV3jXuAFx--xrbu8A7-W06HBt5gdpvl-iE1fmhHGfienShhUMj5yArLKUskpQSH6hZqM4xho0XTwZACtCeZa584xLUUdns6pH2yOo_elZN7n47NhODT7nFWEQQ_ZKZMxzaGSRaUALYoMpGqa8ofpUKLDAkJhqJWMJHktgHYNpekr9QR2561IlnnWxZN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-xl">
+<h3 class="font-headline-md text-headline-md">The Roastery</h3>
+<p class="font-body-md text-on-surface-variant">Where digital precision meets artisanal heat.</p>
+</div>
+</div>
+<!-- Side Vertical -->
+<div class="md:col-span-4 space-y-gutter">
+<div class="group relative rounded-[2rem] overflow-hidden h-[288px] border border-white/5">
+<img alt="" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uj9VciSL3junljrQHDOtrjF7LCIV5qx5H5BHbBBp4-NyFiTtZV7ZLamdVACUezhgrjZ2WACp3hSW9URZT_HdZU2LR02rAL5Rej72WFvHQjoRA4dVbgfNS1NO6PWIaGNpbKkU2H6S3TQXOQeO0d6B9nGMKbWQ0LvArIjXcm1o4l0Ys4Tx5A-dXnQ5bnhLxbcXj28nf6N1LX6FqABJiy2wbDKvwNGPdeqrWZ1f_iEuWFHChnygo6iO_fgTlzC3TFEkyo_yIgifv_85g"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">zoom_in</span>
+</div>
+</div>
+<div class="liquid-glass rounded-[2rem] h-[288px] p-lg flex flex-col justify-between border-primary/20">
+<div>
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary">history_edu</span>
+</div>
+<h4 class="font-headline-md text-headline-md !text-[24px]">Curated Archives</h4>
+<p class="font-body-md text-on-surface-variant mt-sm">Exploring 100 years of Mandha Ru's evolution through light and lens.</p>
+</div>
+<a class="text-primary font-label-caps text-label-caps flex items-center gap-xs" href="#">DISCOVER <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Location Glass Card -->
+<section class="px-container-margin py-xl relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-tertiary-container/5 glow-accent rounded-full -z-10"></div>
+<div class="liquid-glass p-xl md:p-[64px] rounded-[3rem] grid md:grid-cols-2 gap-xl">
+<div class="space-y-lg">
+<h2 class="font-display-lg text-headline-md !text-[48px]">Visit the Sanctuary</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Located in the heart of the historic district, Mandha Ru is an escape from the binary noise into the aromatic heritage of real coffee.</p>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body-md">24 Heritage Lane, Old Quarter, Metropolis</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="font-body-md">+1 (555) MANDHA-RU</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="font-body-md">Mon - Sun: 7:00 AM - 11:00 PM</span>
+</div>
+</div>
+<div class="flex gap-sm">
+<div class="w-12 h-12 rounded-xl liquid-glass flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="w-12 h-12 rounded-xl liquid-glass flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">map</span>
+</div>
+</div>
+</div>
+<div class="rounded-[2rem] overflow-hidden h-[400px] border border-white/10 shadow-inner">
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="A high-fidelity minimalist digital map interface showing a specific location in a bustling city. The map features a dark-mode aesthetic with deep blacks, muted greys, and glowing bright red points of interest. The style is sophisticated and futuristic, reminiscent of macOS Tahoe interfaces with rounded corners and subtle glassmorphism overlays." data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfl-fFtqfSWy6FYR9QdYICbQ7bmtBfKI7R6w8yUo-MB-mv4vixw-SUvqzpuiFvvJUi-aULdrkT0eeoQQcIq3P0uD6GdCBZXAYQTDGsNKc_CaFgLw0nP_BF1nJMm00c6MVScX7hY2h_ZuVlWQHIAZWCUzRxGEqFlPX5hE2K77SIBkr9RqTl9S2IPfmSFubBUQTDntJWgSiqz7EuF29BSLLT1w9BYY0GTh_PXFgtd6TvJiNvDoTIE-xn0fY0bJy1Y4colzmrOD6h6FQ"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-xl bg-surface-container-lowest/80 backdrop-blur-[20px] border-t border-outline-variant/20 py-xl px-container-margin">
+<div class="flex flex-col md:flex-row justify-between items-center w-full gap-md">
+<div class="flex flex-col gap-sm">
+<div class="font-headline-md text-headline-md text-primary">Mandha Ru</div>
+<p class="font-body-md text-on-surface-variant max-w-xs text-center md:text-left">Artisanal Future Heritage. Roasting patience into every cup since 1924.</p>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Sustainability</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Careers</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Locate Us</a>
+</div>
+</div>
+<div class="mt-xl text-center font-body-md text-on-surface-variant opacity-50">
+            © 2024 Mandha Ru Coffee. Artisanal Future Heritage.
+        </div>
+</footer>
+</body></html>
