@@ -1,16 +1,41 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const SplashScreen = ({ logo, onComplete }) => {
+  const [isTimerDone, setIsTimerDone] = useState(false);
+  const [isHeroLoaded, setIsHeroLoaded] = useState(false);
+
   useEffect(() => {
-    // Total sequence duration before triggering exit
-    // Logo entrance (1s) + BG transition (1.5s) + small pause (0.5s)
+    // 1. Minimum display time (3 seconds)
     const timer = setTimeout(() => {
-      onComplete();
+      setIsTimerDone(true);
     }, 3000);
 
+    // 2. Hero Image Preload logic
+    // We preload the hero image here to ensure it's in the browser cache 
+    // before the splash screen fades out.
+    const img = new Image();
+    img.src = '/images/hero.jpg';
+    
+    if (img.complete) {
+      setIsHeroLoaded(true);
+    } else {
+      img.onload = () => setIsHeroLoaded(true);
+      img.onerror = () => {
+        console.error("Failed to load hero image, proceeding with splash screen exit.");
+        setIsHeroLoaded(true); // Proceed anyway so we don't get stuck
+      };
+    }
+
     return () => clearTimeout(timer);
-  }, [onComplete]);
+  }, []);
+
+  // Coordinate exit
+  useEffect(() => {
+    if (isTimerDone && isHeroLoaded) {
+      onComplete();
+    }
+  }, [isTimerDone, isHeroLoaded, onComplete]);
 
   return (
     <motion.div
