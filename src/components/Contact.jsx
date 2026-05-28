@@ -41,7 +41,7 @@ const Contact = ({ contact }) => {
           
           <div className="space-y-10">
             {[
-              { icon: 'location_on', title: 'Lokasi Kami', content: contact.address, action: 'Buka di Google Maps', link: contact.googleMapsLink },
+              { icon: 'location_on', title: 'Lokasi', content: contact.address, action: 'Buka di Google Maps', link: contact.googleMapsLink },
               { icon: 'mail', title: 'Email', content: contact.email, action: 'Kirim Email', link: `mailto:${contact.email}` },
               { icon: 'chat', title: 'Telepon & SMS', content: contact.phone, action: 'Hubungi Sekarang', link: `tel:${contact.phone.replace(/\s/g, '')}`, special: true },
               { icon: 'schedule', title: 'Jam Operasional', content: `Setiap hari: ${contact.openingHours.everydays}`, type: 'text' }

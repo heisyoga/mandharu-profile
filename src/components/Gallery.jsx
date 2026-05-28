@@ -40,7 +40,7 @@ const Gallery = ({ gallery }) => {
           <motion.p 
             className="text-on-surface-variant max-w-2xl mx-auto font-body-md md:font-body-lg"
           >
-            Lihatlah sekeliling Mandha Ru. Dari proses penyeduhan yang teliti hingga sudut-sudut tenang tempat tamu kami bersantai.
+            Lihatlah sekeliling Mandha Ru. Sudut-sudut tenang rumah untuk beristirahat dan bersantai.
           </motion.p>
         </motion.div>
       </div>

@@ -109,13 +109,13 @@ const Footer = ({ brand, contact }) => {
           </motion.div>
         </div>
 
-        <motion.div variants={itemVariants} className="max-w-xs w-full space-y-6">
+        {/* <motion.div variants={itemVariants} className="max-w-xs w-full space-y-6">
           <h4 className="font-label-lg text-label-lg text-primary uppercase tracking-[0.2em] font-bold">Newsletter</h4>
           <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">Dapatkan cerita budaya kopi dan promo menarik dari Mandha Ru.</p>
           <div className="relative group">
             <input 
               className="bg-white border border-outline-variant/50 rounded-2xl px-6 py-4 w-full focus:ring-2 focus:ring-primary outline-none transition-all shadow-inner" 
-              placeholder="Alamat Email Anda" 
+              placeholder="Alamat Email kamu" 
               type="email" 
             />
             <motion.button 
@@ -126,7 +126,7 @@ const Footer = ({ brand, contact }) => {
               Daftar Sekarang
             </motion.button>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       <motion.div 

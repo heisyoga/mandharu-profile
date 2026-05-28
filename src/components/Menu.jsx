@@ -102,7 +102,7 @@ const Menu = ({ menu }) => {
           Menu Mandha Ru
         </motion.h1>
         <p className="max-w-2xl mx-auto text-on-surface-variant font-body-md md:font-body-lg text-body-md md:text-body-lg leading-relaxed">
-          Nikmati perpaduan rasa autentik Vietnam dan Asia Tenggara dalam setiap sajian kami.
+          Nikmati perpaduan rasa kopi dan suasana rumah dalam setiap sajian kami.
         </p>
         <p className="mt-4 text-secondary font-label-sm italic bg-secondary/5 inline-block px-4 py-1 rounded-full border border-secondary/10">
           * Harga belum termasuk service 5%
@@ -205,7 +205,7 @@ const Menu = ({ menu }) => {
                       </div>
                     )}
                     <p className="text-on-surface-variant font-body-sm text-label-sm md:text-body-sm leading-relaxed opacity-70 mt-1">
-                      {item.description || 'Sajian spesial Mandha Ru untuk Anda.'}
+                      {item.description || 'Sajian spesial Mandha Ru untuk kamu.'}
                     </p>
                   </div>
                   <div className="flex flex-col items-end">
@@ -233,13 +233,13 @@ const Menu = ({ menu }) => {
             <div>
               <h3 className="font-display-lg text-headline-lg mb-4 font-bold leading-tight text-white italic">Haus Cerita Baru?</h3>
               <p className="font-body-md text-body-lg mb-8 opacity-80 leading-relaxed text-white/90">
-                Kami selalu punya ruang untuk cerita Anda. Temukan kenyamanan rumah di setiap cangkir kopi kami.
+                Kami selalu punya ruang untuk cerita kamu. Temukan kenyamanan rumah di setiap cangkir kopi kami.
               </p>
             </div>
             <div className="flex flex-col gap-4">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
                 <p className="text-white font-body-md leading-relaxed italic">
-                  "Kopi terbaik adalah kopi yang dinikmati bersama cerita. Temukan ruang Anda di Mandha Ru."
+                  "Kopi terbaik adalah kopi yang dinikmati bersama cerita. Temukan ruang kamu di Mandha Ru."
                 </p>
                 <div className="mt-4 flex items-center gap-2 text-secondary font-bold">
                   <span className="material-symbols-outlined">local_cafe</span>

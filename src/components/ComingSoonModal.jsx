@@ -36,7 +36,7 @@ const ComingSoonModal = ({ isOpen, onClose }) => {
                 </h3>
                 
                 <p className="font-body-md text-on-surface-variant leading-relaxed mb-10">
-                  Kami sedang meracik fitur pemesanan langsung melalui website agar Anda bisa menikmati kopi Mandha Ru dengan lebih mudah. Tunggu kehadirannya ya!
+                  Kami sedang meracik fitur pemesanan langsung melalui website agar kamu bisa menikmati kopi Mandha Ru dengan lebih mudah. Tunggu kehadirannya ya!
                 </p>
                 
                 <div className="flex flex-col gap-4">
