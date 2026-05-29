@@ -1,75 +1,56 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Story from './components/Story';
-import Menu from './components/Menu';
-import Gallery from './components/Gallery';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import SplashScreen from './components/SplashScreen';
-import ComingSoonModal from './components/ComingSoonModal';
-import { useSiteData } from './hooks/useSiteData';
-import logoData from './assets/logo.png?w=640&format=webp&as=url'; // Import the optimized logo
-const logo = typeof logoData === 'string' ? logoData : (logoData.default || logoData);
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import Login from './admin/pages/Login';
+import Dashboard from './admin/pages/Dashboard';
+import HeroSettings from './admin/pages/HeroSettings';
+import AboutSettings from './admin/pages/AboutSettings';
+import MenuSettings from './admin/pages/MenuSettings';
+import GallerySettings from './admin/pages/GallerySettings';
+import ContactSettings from './admin/pages/ContactSettings';
+import UserManagement from './admin/pages/UserManagement'; // Import UserManagement
+import AdminLayout from './admin/components/AdminLayout';
+import { AdminDataProvider } from './admin/context/AdminDataContext'; // Import AdminDataProvider
 import './App.css';
 
+// Simple Auth Guard (Mock)
+const ProtectedRoute = ({ children }) => {
+  const isAuthenticated = localStorage.getItem('admin_authenticated') === 'true';
+  if (!isAuthenticated) {
+    return <Navigate to="/admin/login" replace />;
+  }
+  return children;
+};
+
 function App() {
-  const { data, loading, error } = useSiteData();
-  const [showSplash, setShowSplash] = useState(true);
-  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-secondary" />
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-surface">
-        <div className="text-error font-headline-md">Error: {error}</div>
-      </div>
-    );
-  }
-
-  const openOrderModal = () => setIsOrderModalOpen(true);
-
   return (
-    <>
-      <div className="grain-overlay" />
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/admin/login" element={<Login />} />
       
-      <AnimatePresence mode="wait">
-        {showSplash ? (
-          <SplashScreen 
-            logo={logo} // Pass the imported logo
-            onComplete={() => setShowSplash(false)} 
-          />
-        ) : (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden"
-          >
-            <Navbar brand={data.brand} onOrderClick={openOrderModal} />
-            <main>
-              <Hero brand={data.brand} />
-              <Story about={data.about} />
-              <Menu menu={data.menu} />
-              <Gallery gallery={data.gallery} />
-              <Contact contact={data.contact} />
-            </main>
-            <Footer brand={data.brand} contact={data.contact} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <ComingSoonModal 
-        isOpen={isOrderModalOpen} 
-        onClose={() => setIsOrderModalOpen(false)} 
-      />
-    </>
+      {/* Admin Protected Routes */}
+      <Route 
+        path="/admin" 
+        element={
+          <ProtectedRoute>
+            <AdminDataProvider> {/* Wrap with AdminDataProvider */}
+              <AdminLayout />
+            </AdminDataProvider>
+          </ProtectedRoute>
+        }
+      >
+        <Route index element={<Dashboard />} />
+        <Route path="hero" element={<HeroSettings />} />
+        <Route path="about" element={<AboutSettings />} />
+        <Route path="menu" element={<MenuSettings />} />
+        <Route path="gallery" element={<GallerySettings />} />
+        <Route path="contact" element={<ContactSettings />} />
+        <Route path="users" element={<UserManagement />} /> {/* Add UserManagement Route */}
+      </Route>
+      
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 
